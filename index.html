@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="./Videos/couple_running_together.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div class="stopwatch">
+      <h1>Stopwatch</h1>
+      <h2 id="displayTime">00:00:00</h2>
+      <div class="buttons">
+        <button onclick="watchStart(); playAudio()">Start</button>
+        <button onclick="watchStop(); pauseAudio()">Stop</button>
+        <button onclick="watchReset(); pauseAudio()">Reset</button>
+      </div>
+    </div>
+    <audio
+      loop
+      src="audio/clock-ticking-sounded-updated.mp3"
+      id="ticking"
+    ></audio>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
