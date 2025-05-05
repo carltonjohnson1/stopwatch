@@ -37,6 +37,11 @@ body {
     min-height: 100%; 
   }
 
+  #myVideoMobile {
+   display: none; 
+  }
+
+
 .stopwatch {
     position: fixed;
     top: 50%;
@@ -45,42 +50,42 @@ body {
     width: 90%;
     max-width: 600px;
     text-align: center;
-    padding: 40px 0;
+    padding: 2.5rem 0;
     color: var(--white);
-    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0.625rem 0.625rem rgba(0,0,0,0.2);
     background: linear-gradient(rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
     border-radius: 16px;
 }
 
 .stopwatch h1 {
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: 600;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .stopwatch h2 {
-    margin-top: 20px;
-    font-size: 64px;
+    margin-top: 1.25rem;
+    font-size: 4rem;
     font-weight: 300;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 }
 
 .buttons {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 40px;
+    padding-bottom: 2.5rem;
 
 }
 
 .buttons button {
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     border-radius: 4px;
     background-color: var(--white);
     cursor: pointer;
     font-weight: 500;
     font-size: 1.25rem;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     border-style: none;
     transition: 0.20s all ease;
 }
@@ -91,7 +96,7 @@ body {
 }
 
 .buttons button:first-child{
-    margin-right: 15px;
+    margin-right: 1rem;
 
     &:hover {
         background-color: var(--mutedGreen);
@@ -104,7 +109,7 @@ body {
 
 
 .buttons button:nth-child(2){
-    margin-right: 15px;
+    margin-right: 1rem;
     &:hover {
         background-color: var(--mutedRed);
     }
@@ -133,10 +138,22 @@ body {
     to {transform: scale(1.10);}
 }
 
-/* RESPONSIVE - SCREENS BELOW 500PX */
+/* RESPONSIVE - SCREENS BELOW 600PX */
 
-@media screen and (max-width: 500px) {
-    
+@media screen and (max-width: 600px) {
+
+#myVideo {
+    display: none; 
+}
+
+#myVideoMobile {
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%; 
+  }
     
 .stopwatch {
     padding: 1.25rem 0;
